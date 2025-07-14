@@ -1,0 +1,22 @@
+name: GitHub Actions Asset Catalog
+
+on:
+  push:
+    branches: ['feature/asset-catalog-ab']
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: install
+        run: npm install
+        working-directory: asset-catalog
+      - name: run the test
+        run: npm run test
+        working-directory: asset-catalog

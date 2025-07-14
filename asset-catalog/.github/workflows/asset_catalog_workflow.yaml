@@ -1,0 +1,27 @@
+name: asset catalog test
+run-name: asset catalog workflow
+
+env:
+  CACHE_ROUTE: "${{ github.workspace }}/asset-catalog-assignment/src/cache.json"
+  SERVER_ROUTE: "${{ github.workspace }}/asset-catalog-assignment/src/like_server"
+'on':
+  workflow_dispatch: null
+  push:
+    branches:
+      - feature/asset_catalog
+
+jobs:
+  check-python-application:
+
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Beyond my branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/asset_catalog
+
+      - name: Build python docker image
+        run: docker build -t python-app2 .
+        working-directory: ./asset-catalog-assignment
+        

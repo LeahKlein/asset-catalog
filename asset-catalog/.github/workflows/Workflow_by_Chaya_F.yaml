@@ -1,0 +1,32 @@
+name: Asset Catalog
+on:
+  push:
+    branches:
+      - "Asset-catalog-by-chaya-f"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./asset-catalog-chaya
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12.3"
+
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: ./asset-catalog-chaya
+
+      - name: Run tests
+        run: |
+          python -m unittest test.py
+        working-directory: ./asset-catalog-chaya/tests

@@ -1,0 +1,7 @@
+/.vscode
+.env
+__pychche__/
+src/__pychche__/main.cpython-312.pyc
+tests/__pychche__/test.cpython-312.pyc
+src/up.txt
+catalog_storage_assets/

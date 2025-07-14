@@ -1,0 +1,22 @@
+name: 'Workflow-tests'
+on: 
+  push:
+    branches: 
+      - 'feature/asset-catalog-shoshi'
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: asset-catalog-shoshi
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Install
+        run: npm install
+      - name: Run tests with npm 
+        run: npm test

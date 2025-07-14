@@ -1,0 +1,27 @@
+name: 📄AssetCatalog Workflow
+on:
+  push:
+    branches: 
+      - "feature/asset-catalog-Riki"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: asset_catalog_Riki
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🛠️Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17.0'
+
+      - name: ⏬Install dependencies
+        run: npm install
+
+      - name: ✅Run the application
+        run: docker run --name asset_catalog -v ${PWD}:/app -p 8080:8080 node:14
+
+      # - name: ✅ Run test 
+      #   run: npm test

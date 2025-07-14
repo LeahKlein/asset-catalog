@@ -1,0 +1,24 @@
+name: assets-workflow
+
+on:
+  push:
+    branches:
+    - feature/asset-catalog-miriam
+
+jobs:
+  Build-And-Test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "./asset-catalog-miriam"
+    steps:
+      - name: Checkout to feature/asset-catalog-miriam branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/asset-catalog-miriam
+
+      - name: Installing
+        run: npm install
+
+      - name: Run tests
+        run: npm test

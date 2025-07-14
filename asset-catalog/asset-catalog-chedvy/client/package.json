@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "client.js",
+  "scripts": {
+    "asset-catalog": "node ./src/client.js",
+    "run tests": "node test/client.js",
+    "start": "node src/client.js",
+    "test": "jest --coverage"
+  },
+  "author": "c",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "async-lock": "^1.4.1",
+    "axios": "^1.8.1",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "jest": "^29.7.0",
+    "node-async-locks": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/async-lock": "^1.4.2"
+  }
+}

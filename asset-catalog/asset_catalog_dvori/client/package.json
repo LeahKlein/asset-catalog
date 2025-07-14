@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "asset catalog",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/client.js",
+    "asset_catalog": "node src/client.js",
+    "test": "jest",
+    "run test": "node test/clientTest.js"
+  },
+  "author": "dvora",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "jest": "^29.7.0",
+    "node-async-locks": "^2.1.2"
+  }
+}

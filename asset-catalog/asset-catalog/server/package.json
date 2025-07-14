@@ -1,0 +1,16 @@
+{
+  "name": "server-asset-catalog",
+  "version": "1.0.0",
+  "description": "the server remote to save the files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "ayala bresler",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jest": "^29.7.0"
+  }
+}

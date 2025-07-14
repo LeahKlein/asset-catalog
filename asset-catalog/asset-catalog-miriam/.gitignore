@@ -1,0 +1,5 @@
+.cache/watch-directory.json
+.env
+test/.cache/watch-directory.json
+test/__pycache__/
+src/__pycache__/

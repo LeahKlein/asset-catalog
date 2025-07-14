@@ -1,0 +1,31 @@
+name:  asset catalog tests in python
+run-name: asset catalog workflow fridi
+
+on:
+  push:
+    branches:  "feature/asset-catalog-task-fridi"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 'Asset-Catalog-Fridi/tests'
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: 🛠️ Set up Python 3.12.6
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.12.6"
+
+    - name: ⏬ Install dependencies'
+      run: |
+        pip install -r ../requirements.txt
+      
+    - name: ✅ Test with pytest
+      run: |
+        pytest
+      

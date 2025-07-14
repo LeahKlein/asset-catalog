@@ -1,0 +1,22 @@
+name: my_workflow
+
+on:
+  push:
+    branches: [ "feature/asset_catalog_dvori" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - name: install packages
+      run: npm install axios node-async-locks jest dotenv
+    - name: Run tests
+      run: npm run test
+      working-directory: asset_catalog_dvori/client

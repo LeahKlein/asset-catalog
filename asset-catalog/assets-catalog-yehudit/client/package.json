@@ -1,0 +1,25 @@
+{
+  "name": "asset-catalog",
+  "version": "1.0.0",
+  "main": "client.js",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "fs": "^0.0.1-security",
+    "node-async-locks": "^2.1.2",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "start": "node modules/assetCatalog.js",
+    "asset-catalog": "node modules/assetCatalog.js"
+  },
+  "author": "Yehudit",
+  "license": "ISC",
+  "jest": {
+    "transform": {}
+  }
+}

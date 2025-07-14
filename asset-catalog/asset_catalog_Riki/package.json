@@ -1,0 +1,21 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My Node.js application using fs, path, chokidar, and async-lock",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "async-lock": "^1.4.1",
+    "chokidar": "^3.6.0",
+    "commander": "^9.5.0",
+    "my-app": "file:"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

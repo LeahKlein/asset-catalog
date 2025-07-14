@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: 
+      - assets-catalog-yehudit  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: './assets-catalog-yehudit/client'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: install node  
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.4.1'
+      - name: install devDependencies    
+        run: npm install --include=dev    
+      - run: npm run test:coverage
+
+      

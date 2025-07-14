@@ -1,0 +1,22 @@
+name: asset catalog workflow
+
+on:
+  push:
+    branches:
+      - features/assetCatalogDvory
+
+jobs:
+    build_and_test:
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: "./asset-catalog-dvory"
+      steps:
+        - uses: actions/checkout@v4
+        - name: Use Node.js 
+          uses: actions/setup-node@v4
+        - name: Build  server image
+          run: docker build -t server .
+          working-directory: "./asset-catalog-dvory/server"
+        - name: Build  cli image
+          run: docker build -t cli .

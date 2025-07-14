@@ -1,0 +1,17 @@
+client/.env
+
+client/node_modules
+
+client/coverage
+
+client/package-lock.json
+
+client/cache/assets.json
+
+server/node_modules
+
+server/.env
+
+server/package-lock.json
+
+q.js

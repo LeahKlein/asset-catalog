@@ -1,0 +1,22 @@
+{
+  "name": "catalog",
+  "version": "1.0.0",
+  "main": "client.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "asset-catalog": "node ./src/client.js"
+  },
+  "author": "miri",
+  "license": "ISC",
+  "dependencies": {
+    "async-lock": "^1.4.1",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "jest": "^29.7.0",
+    "node-async-locks": "^2.1.2"
+  },
+  "keywords": [],
+  "description": ""
+}

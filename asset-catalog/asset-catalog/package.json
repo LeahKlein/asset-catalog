@@ -1,0 +1,23 @@
+{
+  "name": "asset-catalog",
+  "version": "1.0.0",
+  "description": "asset-of-catalog-in-cmd",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/init.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-lock": "^1.4.1",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "generate-env-example": "^1.1.0",
+    "i": "^0.3.7",
+    "jest": "^29.7.0",
+    "npm": "^10.9.0"
+  }
+}

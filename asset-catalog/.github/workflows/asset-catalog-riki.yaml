@@ -1,0 +1,26 @@
+name: workflow-run-test
+
+on:
+  push:
+    branches:
+      - 'feature/asset-catalog-riki'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install requests
+      run: python -m pip install requests
+      
+    - name: Build
+      run: python -m unittest tests_module.py
+      working-directory: ./asset-catalog-riki/tests
