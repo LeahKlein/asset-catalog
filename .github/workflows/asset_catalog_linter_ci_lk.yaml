@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./asset_catalog_lk/
+        working-directory: ./asset-catalog/
     steps:  
     - name: 🔨 Check out repository
       uses: actions/checkout@v4
