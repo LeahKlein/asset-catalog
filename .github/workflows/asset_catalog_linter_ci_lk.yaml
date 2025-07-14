@@ -2,7 +2,7 @@ name: 🧪Linter CI
 on: 
   push:
     branches:
-      - feature/asset_catalog_lk
+      - feature_asset_catalog_lk
 jobs:
   test:
     runs-on: ubuntu-latest
